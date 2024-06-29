@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OTP Generate</title>
+        <style>
+            .otpbox {
+                border: 1px solid;
+                font-weight: bold;
+                width:100px;
+                height:30px;
+                padding: 10px;
+                margin:10px;
+                border-radius: 5px;
+                text-align: center;
+                color:rgb(68, 29, 56);
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .btn {
+                display: block;
+                width:120px;
+                height:30px;
+                padding: 10px;
+                margin:10px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="otpbox">otp</div>
+        <input type="button" class="btn" value="Generate" onclick="otpgen()"></input>
+        <script>
+           var otpgen = () => {
+            var otpvalue = "";
+            var otpSize = parseInt(prompt("Enter the length of the otp"));
+            for(i=0;i<otpSize;i++) {
+                otpvalue += getRamdomNum() ;
+                console.log(otpvalue);
+            }
+            document.querySelector(".otpbox").innerHTML = otpvalue ;
+
+           }
+           var getRamdomNum = () => {
+            return (Math.round(Math.random() * 9));
+            console.log(Object);
+           }
+        </script>
+       </body> 
+</html>
